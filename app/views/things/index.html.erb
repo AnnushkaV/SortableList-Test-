@@ -1,7 +1,8 @@
 <div class="panel panel-default">
+
+  <%= link_to 'new', new_thing_path(@thing), :class => 'btn btn-primary pull-left' %>
   <table class="table table-bordered table-striped" id="sortable">
     <thead>
-    <%= link_to 'new', new_thing_path(@thing), :class => 'btn btn-default pull-right' %>
     <tr>
       <th>
         Title
