@@ -1,0 +1,30 @@
+<div class="panel panel-default">
+  <table class="table table-bordered table-striped" id="sortable">
+    <thead>
+    <%= link_to 'new', new_thing_path(@thing), :class => 'btn btn-default pull-right' %>
+    <tr>
+      <th>
+        Title
+      </th>
+      <th>
+        Description
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @things.each do |thing| %>
+        <tr data-item-id=<%= "#{thing.id}" %> class="item">
+          <td>
+            <%= thing.title %>
+          </td>
+          <td>
+            <%= thing.description %>
+          </td>
+          <td>
+            <%= link_to 'show', thing_path(thing), :class => 'btn btn-default pull-right' %>
+          </td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
